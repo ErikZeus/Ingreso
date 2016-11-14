@@ -1,0 +1,4 @@
+﻿
+[2016-11-06 21:33:04] - En funcion Regresunregistro : Unable to connect to any of the specified MySQL hosts.
+[2016-11-06 21:33:06] - En funcion Regresunregistro : Unable to connect to any of the specified MySQL hosts.
+[2016-11-06 21:36:13] - En funcion Regresunregistro : You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Selece indice from vendedores where password = '123'' at line 1

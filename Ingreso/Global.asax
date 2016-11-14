@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="Ingreso.Global_asax" Language="C#" %>
