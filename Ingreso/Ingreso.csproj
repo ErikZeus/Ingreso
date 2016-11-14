@@ -191,7 +191,6 @@
     <Content Include="App_Data\SideMenu.xml" />
     <Content Include="App_Data\TopMenu.xml" />
     <Content Include="bin\DevExpress.Data.v16.1.dll" />
-    <Content Include="bin\DevExpress.Data.v16.1.xml" />
     <Content Include="bin\DevExpress.Office.v16.1.Core.dll" />
     <Content Include="bin\DevExpress.Office.v16.1.Core.xml" />
     <Content Include="bin\DevExpress.Pdf.v16.1.Core.dll" />
@@ -199,12 +198,9 @@
     <Content Include="bin\DevExpress.Pdf.v16.1.Drawing.dll" />
     <Content Include="bin\DevExpress.Pdf.v16.1.Drawing.xml" />
     <Content Include="bin\DevExpress.Printing.v16.1.Core.dll" />
-    <Content Include="bin\DevExpress.Printing.v16.1.Core.xml" />
     <Content Include="bin\DevExpress.RichEdit.v16.1.Core.dll" />
-    <Content Include="bin\DevExpress.RichEdit.v16.1.Core.xml" />
     <Content Include="bin\DevExpress.Web.ASPxThemes.v16.1.dll" />
     <Content Include="bin\DevExpress.Web.v16.1.dll" />
-    <Content Include="bin\DevExpress.Web.v16.1.xml" />
     <Content Include="bin\de\DevExpress.Data.v16.1.resources.dll" />
     <Content Include="bin\de\DevExpress.Office.v16.1.Core.resources.dll" />
     <Content Include="bin\de\DevExpress.Pdf.v16.1.Core.resources.dll" />
@@ -213,8 +209,6 @@
     <Content Include="bin\de\DevExpress.Web.v16.1.resources.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.xml" />
-    <Content Include="bin\EntityFramework.xml" />
     <Content Include="bin\es\DevExpress.Data.v16.1.resources.dll" />
     <Content Include="bin\es\DevExpress.Office.v16.1.Core.resources.dll" />
     <Content Include="bin\es\DevExpress.Pdf.v16.1.Core.resources.dll" />
@@ -232,10 +226,8 @@
     <Content Include="bin\ja\DevExpress.Web.v16.1.resources.dll" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
     <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
     <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
-    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
     <Content Include="bin\Microsoft.AI.Web.dll" />
     <Content Include="bin\Microsoft.AI.Web.xml" />
     <Content Include="bin\Microsoft.AI.WindowsServer.dll" />

@@ -106,10 +106,10 @@ namespace Ingreso
             string nom = NomSub.Text;
 
             string indi = this.cbMenu2.SelectedItem.Value.ToString();
-   
+            string url = Urlt.Text;
 
             AcesoDatos a = new AcesoDatos();
-            a.Ejecutar("insert into submenu (nombre,idmenu) values('" + nom + "','"+indi+"')");
+            a.Ejecutar("insert into submenu (nombre,idmenu,url) values('" + nom + "','"+indi+"','"+url+"')");
             SubMenu.Text = "Agregado con exito";
             cargarcombos();
         }

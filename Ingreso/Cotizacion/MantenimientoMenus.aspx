@@ -121,7 +121,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
 
-    <%-- Mantenimiento 1- Roles --%>
+    <%-- Mantenimiento 2 - Menus --%>
     <div style='padding: 10px; text-align: left; left: 10%'>
         <table>
             <tr>
@@ -247,7 +247,7 @@
 
         </table>
     </div>
-    <%-- Mantenimiento 2 - Menus --%>
+    <%-- Mantenimiento 3 - Sub Menus --%>
     <div style='padding: 10px; text-align: left;'>
         <table>
             <tr>
@@ -326,10 +326,12 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:TextBox ID="NomSub" runat="server" Width="144px"></asp:TextBox></td>
+                                    Agregar SubMenu:<asp:TextBox ID="NomSub" runat="server" Width="144px"></asp:TextBox></td>
                                 <td>
-                                    <asp:Button ID="Button4" runat="server" Text="Agregar Submenu" OnClick="Button4_Click" /></td>
+                                    Agregar Url:<asp:TextBox ID="Urlt" runat="server"></asp:TextBox>
+                                 </td>   
                             </tr>
+                            <tr><td><asp:Button ID="Button4" runat="server" Text="Agregar Submenu" OnClick="Button4_Click" /></td></tr>
                             <tr>
                                 <td>
                                     <asp:DropDownList ID="cbSubMenu" runat="server" Height="16px" Width="140px">
