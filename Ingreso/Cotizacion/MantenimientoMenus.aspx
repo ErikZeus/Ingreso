@@ -118,14 +118,14 @@
 <asp:Content ID="Content4" runat="server" ContentPlaceHolderID="Content">
 
 
-
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
 
     <%-- Mantenimiento 1- Roles --%>
     <div style='padding: 10px; text-align: left; left: 10%'>
         <table>
             <tr>
-                <th class="auto-style5">Usuarios<asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
+                <th class="auto-style5">Usuarios
                 </th>
                 <th style="width: 400px"></th>
             </tr>
@@ -190,6 +190,7 @@
                 </th>
                 <th style="width: 400px"></th>
             </tr>
+            <tr><td></td><td></td></tr>
             <tr>
                 <td class="auto-style7">
                     <div class="CSSTableGenerator">
