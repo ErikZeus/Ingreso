@@ -11,7 +11,11 @@ namespace Ingreso
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //string rol = "";
 
+            //AcesoDatos a = new AcesoDatos();
+
+            //rol = a.Regresaunregistro("Select rol from vendedores where usuario = '"+return.tbusername+"' ");
         }
     }
 }

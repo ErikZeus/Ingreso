@@ -118,16 +118,16 @@
 <asp:Content ID="Content4" runat="server" ContentPlaceHolderID="Content">
 
 
-    <asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
-
-    <%-- Mantenimiento 2 - Menus --%>
+    <%-- Mantenimiento 3 - Sub Menus --%>
     <div style='padding: 10px; text-align: left; left: 10%'>
         <table>
             <tr>
-                <th class="auto-style5">Usuarios
+                <th class="auto-style5">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+                    Usuarios
                 </th>
-                <th style="width: 400px"></th>
+                <th style="width: 400px">&nbsp;</th>
             </tr>
             <tr>
                 <td class="auto-style5">
@@ -138,12 +138,13 @@
                 </td>
                 <td style="width: 400px">
 
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <ContentTemplate>
                             <div class="CSSTableGenerator">
                                 <table style="width: 400px;">
-                                    <tr>
-                                        <td></td>
+                                       <tr>
+                                        <td>
+                                          
+
+                                        </td>
                                         <td>Asignación de Roles</td>
                                     </tr>
                                     <tr>
@@ -166,14 +167,11 @@
                                     </tr>
                                 </table>
                             </div>
+
                             <br>
 
 
                             <asp:Label ID="Rols" runat="server" Text="."></asp:Label>
-
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-
 
                 </td>
 
@@ -200,8 +198,6 @@
                 </td>
                 <td class="auto-style6" style="width: 400px">
 
-                    <asp:UpdatePanel ID="UpdatePanel4" runat="server">
-                        <ContentTemplate>
                             <div class="CSSTableGenerator">
                                 <table style="width: 400px;">
                                     <tr>
@@ -235,8 +231,7 @@
 
                             <asp:Label ID="Rol2" runat="server" Text="."></asp:Label>
 
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
+
 
 
                 </td>
@@ -286,10 +281,6 @@
                             </tr>
                         </table>
                     </div>
-                    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                        <ContentTemplate>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
                     <asp:Label ID="Menus" runat="server" Text="."></asp:Label>
                     <br>
                 </td>
@@ -331,7 +322,7 @@
                                     Agregar Url:<asp:TextBox ID="Urlt" runat="server"></asp:TextBox>
                                  </td>   
                             </tr>
-                            <tr><td><asp:Button ID="Button4" runat="server" Text="Agregar Submenu" OnClick="Button4_Click" /></td></tr>
+                            <tr><td></td><td><asp:Button ID="Button4" runat="server" Text="Agregar Submenu" OnClick="Button4_Click" /></td></tr>
                             <tr>
                                 <td>
                                     <asp:DropDownList ID="cbSubMenu" runat="server" Height="16px" Width="140px">
@@ -341,8 +332,7 @@
                             </tr>
                         </table>
                     </div>
-                    <asp:UpdatePanel ID="UpdatePanel3" runat="server">
-                        <ContentTemplate>
+ 
 
 
                             <table>
@@ -352,11 +342,7 @@
                                     <td>&nbsp;</td>
                                 </tr>
                             </table>
-
-
-
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
+ 
                     <br>
                     <asp:Label ID="SubMenu" runat="server" Text="."></asp:Label>
                     <br>
@@ -364,7 +350,68 @@
             </tr>
         </table>
     </div>
+       <%-- Mantenimiento 3 - Sub Menus --%>
+    <div style='padding: 10px; text-align: left;'>
+        <table>
+            <tr>
+                <th class="auto-style4">Asociar Roles</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+                    <div class="CSSTableGenerator">
+                        <asp:GridView ID="GridView5" runat="server" Width="300px">
+                        </asp:GridView>
+                    </div>
+                </td>
+                <td>
+                    <div class="CSSTableGenerator">
+                        &nbsp;<table style="width: 400px;">
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label1" runat="server" Text="Escoger Sub Menú"></asp:Label></td>
+                                <td>
+                                    <asp:DropDownList ID="cmbSuMenus" runat="server" Height="20px" Width="150px"></asp:DropDownList></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Escoger Rol :</td>
+                                <td>
+                                    <asp:DropDownList ID="cmbRolParaSubMenu" runat="server" Height="20px" Width="150px"></asp:DropDownList>
+                                 </td>   
+                            </tr>
+                            <tr><td style="height: 28px"></td><td style="height: 28px">
+                                <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" Text="Asociar Roles A Sub Menús" />
+                                </td></tr>
+                            <tr>
+                                <td colspan="2">
+                                    &nbsp;</td>
+                               
+                            </tr>
+                        </table>
+                    </div>
+ 
 
+
+                            <table>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+ 
+                    <br>
+                    <asp:Label ID="lblMensajeAsociarRoles" runat="server" Text="."></asp:Label>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 
 
