@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cotizacion.aspx.cs" Inherits="Hoja.Cotizacion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Pagar.aspx.cs" Inherits="Ingreso.Pagar" %>
 
 <!DOCTYPE html>
 
@@ -74,6 +74,10 @@
                 background-color: #1E1E1E;
                 color: white; /* SET COLOR IN BLACK */
             }
+        .auto-style1 {
+            width: 210px;
+            height: 98px;
+        }
     </style>
 </head>
 <body>
@@ -99,9 +103,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
 
                         <div class="lower-logo">
-                            <a href="#" title="Seguros Unity" rel="home">
-                                <img class="logo" src="#" alt="logoUnity"></a>
-                        </div>
+                            &nbsp;<a href="#" title="Seguros Unity" rel="home"><img class="auto-style1" src="../Images/TarjetasdeCredito.png" alt="logoUnity"></a></div>
 
                         <!-- Main Navigation -->
                         <div id="mega-menu-wrap-primary" class="mega-menu-wrap">
@@ -134,48 +136,80 @@
         <div id="nos">
             <div>
                 <div class="wpb_wrapper">
-                    <div style="background-image: url(http://192.168.81.30/Ingreso/Images/BackGround.jpg); background-size: cover;">
+                    <div style="background-image: url(http://localhost:49266/Images/BackGround.jpg); background-size: cover;">
 
                         <p style="text-align: center;"></p>
                         <div class="col-lg-4 col-md-4 col-sm-12"></div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
-                            <h2 style="text-align: center; color: white;" >¡ Asegura tu Futuro Cótiza y Compra tu Seguro de Cancer Contáctanos !</h2>
+                            <h2 style="text-align: center; " class="ui-state-error-text" >Ingresa la información para Comprar tu Seguro</h2>
                             <p style="text-align: center;">
                             </p>
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Nombre*" class="form-control" id="NombreC" />
-
-                            </div>
-                            <br />
-                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Apellido*" class="form-control" id="ApellidoC" />
+                                <input type="text" name="name" placeholder="Codigo de Pedido*" class="form-control" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Dirección*" class="form-control" id="DireccionC" />
+                                <input type="text" name="name" placeholder="Email*" class="form-control" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Telefono*" class="form-control" id="TelefonoC" />
+                                <input type="text" name="name" placeholder="Nit*" class="form-control" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="date" name="name" value="Fecha de Nacimiento" class="form-control" id="FechaNC" />
+                                <input type="text" name="name" placeholder="Nombre*" class="form-control" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="ID*" class="form-control" />
+                                <input type="text" name="name" placeholder="Apellido*" class="form-control" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="email" placeholder="Email*" class="form-control" />
+                                <input type="text" name="name" placeholder="Dirreciòn*" class="form-control" />
 
                             </div>
+                            <br />
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Nùmero de tarjeta de credito*" class="form-control" />
+
+                            </div>
+                            <br />
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Codigo de la tarjeta de credito*" class="form-control" />
+
+                            </div>
+                            <br />
+                            <div class="iconic-input">
+                                <input type="date" name="name" value="Fecha de Vencimiento" class="form-control" />
+
+                            </div>
+                            <br />
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Moneda*" class="form-control" />
+
+                            </div>
+                            <br />
+                            <div class="iconic-input">
+                                <input type="text" name="email" placeholder="Total a Pagar*" class="form-control" />
+
+                            </div>
+                            <br />
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Captcha*" class="form-control" id="TxTCaptcha" />
+
+                            </div>
+                            <br />
+                            <asp:Image ID="Image1" runat="server" />
+                            <br />
+                            <asp:HiddenField ID="HiddenField1" runat="server" />
+                            <dx:ASPxButton ID="ASPxButton1" runat="server" OnClick="ASPxButton1_Click" Text="Re Captcha">
+                            </dx:ASPxButton>
+                            <br />
                             <br />
                             <input type="submit" value="Comprar Seguro" />
 
@@ -255,16 +289,16 @@
 
                                         <li>
                                             <i class="icons icon-location-7"></i>
-                                            Seguros Ducruet<br>
+                                            Seguros Ducruet<br />
                                             C/ Vicente Goikoetxea, 6, 1ª - Oficina 4F
-                                            <br>
+                                            <br />
                                             01008 Vitoria-Gasteiz - Araba
                                         </li>
 
                                         <li>
                                             <i class="icons icon-mobile-6"></i>
                                             Teléfono: (+34) 945 20 27 97 
-                                            <br>
+                                            <br />
                                             Fax: (+34) 944 15 71 76
                                         </li>
 

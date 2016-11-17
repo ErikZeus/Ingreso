@@ -22,14 +22,16 @@
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                         <div class="headerTop">
                             <div class="templateTitle">
-                                <a id="TitleLink" href="~/" runat="server">Ingreso Vendedores</a>
+                                <a id="TitleLink" href="~/" runat="server">Modulo de Cotizaciones</a>
                             </div>
                             <div class="loginControl">
                                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                                     <AnonymousTemplate>
                                         <a href="~/Account/Login.aspx" runat="server" id="loginLink">Log In</a> 
                                         | 
-                                        <a href="~/Account/Register.aspx" runat="server" id="registerLink">Register</a>
+                                        <a href="~/Account/Register.aspx" runat="server" id="registerLink">Registrarse</a>
+                                         | 
+                                          <a href="~/Cotizacion/MantenimientoMenus.aspx" runat="server" id="A1">Mantenimiento</a>
                                     </AnonymousTemplate>
                                     <LoggedInTemplate>
                                         Welcome <span class="bold">

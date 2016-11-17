@@ -190,7 +190,7 @@ namespace Ingreso
             }
 
             lblMensajeAsociarRoles.DataBind();
-
+            cargarcombos();
         }
     }
 }

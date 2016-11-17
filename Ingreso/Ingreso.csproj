@@ -17,7 +17,7 @@
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -275,10 +275,19 @@
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Cotizacion\ProcesoCotizacion.aspx" />
     <Content Include="Cotizacion\Cotizacion.aspx" />
+    <Content Include="Cotizacion\Pagar.aspx" />
+    <Content Include="css\960.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\coolMenu.css" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\S.css" />
     <Content Include="Global.asax" />
-    <Content Include="Images\captcha.Bmp" />
     <Content Include="Cotizacion\MantenimientoMenus.aspx" />
+    <Content Include="Images\BackGround.jpg" />
+    <Content Include="Images\captcha.Bmp" />
     <Content Include="obj\Debug\Ingreso.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Ingreso.dll" />
     <Content Include="obj\Debug\ingreso.dll.licenses" />
@@ -440,12 +449,26 @@
     <Compile Include="AcesoDatos.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Cotizacion\ProcesoCotizacion.aspx.cs">
+      <DependentUpon>ProcesoCotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cotizacion\ProcesoCotizacion.aspx.designer.cs">
+      <DependentUpon>ProcesoCotizacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cotizacion\Cotizacion.aspx.cs">
       <DependentUpon>Cotizacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Cotizacion\Cotizacion.aspx.designer.cs">
       <DependentUpon>Cotizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cotizacion\Pagar.aspx.cs">
+      <DependentUpon>Pagar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cotizacion\Pagar.aspx.designer.cs">
+      <DependentUpon>Pagar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -504,16 +527,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51041</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51041/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

@@ -115,16 +115,14 @@
 </asp:Content>
 
 
-<asp:Content ID="Content4" runat="server" ContentPlaceHolderID="Content">
+<asp:Content ID="Content4" runat="server" ContentPlaceHolderID="Content" >
 
 
     <%-- Mantenimiento 3 - Sub Menus --%>
-    <div style='padding: 10px; text-align: left; left: 10%'>
+    <div style='padding: 10px; text-align:left;'>
         <table>
             <tr>
                 <th class="auto-style5">
-                    <asp:ScriptManager ID="ScriptManager1" runat="server">
-                    </asp:ScriptManager>
                     Usuarios
                 </th>
                 <th style="width: 400px">&nbsp;</th>
@@ -369,7 +367,7 @@
                         &nbsp;<table style="width: 400px;">
                             <tr>
                                 <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td>Asociar Roles con un SubMenú</td>
                             </tr>
                             <tr>
                                 <td>

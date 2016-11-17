@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cotizacion.aspx.cs" Inherits="Hoja.Cotizacion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProcesoCotizacion.aspx.cs" Inherits="Ingreso.ProcesoCotizacion" %>
 
 <!DOCTYPE html>
 
@@ -72,8 +72,47 @@
 
             input[type=submit]:hover {
                 background-color: #1E1E1E;
-                color: white; /* SET COLOR IN BLACK */
+                color: black; /* SET COLOR IN BLACK */
             }
+
+
+
+             .opciones {
+
+            overflow:hidden;
+
+            text-align: center;
+
+            /*margin:auto;*/
+
+
+
+        }
+
+ 
+
+        .opcion {
+
+            display:inline-table;
+
+            padding:15px;
+
+            height:100px;
+
+            width:200px;
+
+            /*margin:3px;*/
+
+        }
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -136,50 +175,106 @@
                 <div class="wpb_wrapper">
                     <div style="background-image: url(http://192.168.81.30/Ingreso/Images/BackGround.jpg); background-size: cover;">
 
-                        <p style="text-align: center;"></p>
+                       <%-- <p style="text-align: center;"></p>--%>
                         <div class="col-lg-4 col-md-4 col-sm-12"></div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
-                            <h2 style="text-align: center; color: white;" >¡ Asegura tu Futuro Cótiza y Compra tu Seguro de Cancer Contáctanos !</h2>
-                            <p style="text-align: center;">
-                            </p>
-                            <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Nombre*" class="form-control" id="NombreC" />
+                            <h2 style="text-align: center; color: #000000;" >Cotizar</h2>
+                            <%--<p style="text-align: center;">
+                            </p>--%>
+                         <div class="opciones">
+                            
+                               <div class="opcion" >
+                                <table >
+                                    <tr>
+                                        <td>
+                                              <div class="iconic-input">
+                                                 <input type="text" name="name" placeholder="Planes de Càncer*" class="form-control" />
+
+                                                </div>
+                                                <br />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                                <div class="iconic-input">
+                                <input type="date" name="name" value="Fecha de Nacimiento" class="form-control" />
+
+                            </div>
+                            <br />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div >
+
+
+                            <div class="opcion">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Suma Asegurada*" class="form-control" />
+
+                            </div>
+                            <br />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Edad*" class="form-control" />
+
+                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>    
+                            
+                            <%--<br />--%>
+                            <dx:ASPxButton ID="ASPxButton2" runat="server" BackColor="#3333FF" ForeColor="White" Height="31px" Text="Cotizar" Width="110px" Theme="iOS">
+                            </dx:ASPxButton>
+                            <br />
+                            <br />
+                            
+                             <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Prima Anual Calculada*" class="form-control" />
 
                             </div>
                             <br />
                              <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Apellido*" class="form-control" id="ApellidoC" />
+                                <input type="text" name="name" placeholder="Prima Mensual*" class="form-control" />
+
+                            </div>
+                            <br />
+                        <h2 style="text-align: center; color: #000000;" >Datos del Cliente</h2>
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Codigo*" class="form-control" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Dirección*" class="form-control" id="DireccionC" />
+                                <input type="text" name="name" placeholder="Nombre del Cliente*" class="form-control" />
 
                             </div>
                             <br />
-                            <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Telefono*" class="form-control" id="TelefonoC" />
+                             <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Tèlefonos*" class="form-control" />
 
                             </div>
                             <br />
-                            <div class="iconic-input">
-                                <input type="date" name="name" value="Fecha de Nacimiento" class="form-control" id="FechaNC" />
+                             <div class="iconic-input">
+                                <input type="text" name="email" placeholder="E-Mail*" class="form-control" />
 
                             </div>
                             <br />
-                            <div class="iconic-input">
-                                <input type="text" name="name" placeholder="ID*" class="form-control" />
+                             <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Direcciòn Residencial*" class="form-control" />
 
                             </div>
                             <br />
-                            <div class="iconic-input">
-                                <input type="text" name="email" placeholder="Email*" class="form-control" />
-
-                            </div>
-                            <br />
-                            <input type="submit" value="Comprar Seguro" />
-
-                            <div id="msg"></div>
+                            <input type="submit" value="Guardar" /><dx:ASPxButton ID="ASPxButton1" runat="server" Height="31px" OnClick="ASPxButton1_Click" Text="Pagar" Width="110px" BackColor="#3333FF" ForeColor="White" Theme="iOS">
+                            </dx:ASPxButton>
+                            &nbsp;<div id="msg"></div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <br />
