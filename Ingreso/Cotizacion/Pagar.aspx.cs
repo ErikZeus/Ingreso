@@ -188,14 +188,8 @@ namespace Ingreso
                 return;
             }
 
-            if ()
-            {
 
-            }
-            else
-            {
 
-            }
 
 
 
