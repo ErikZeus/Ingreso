@@ -112,5 +112,93 @@ namespace Ingreso
         {
             ImagenCaptcha();
         }
+
+        protected void ASPxButton2_Click(object sender, EventArgs e)
+        {
+            string CodPed = this.HiddenField2.Value;
+            string Email = this.HiddenField3.Value;
+            string Nit = this.HiddenField4.Value;
+            string Nom = this.HiddenField5.Value;
+            string Apel = this.HiddenField6.Value;
+            string Direc = this.HiddenField7.Value;
+            string Nutj = this.HiddenField8.Value;
+            string Codtj = this.HiddenField9.Value;
+            string Fechv = this.HiddenField10.Value;
+            string Mon = this.HiddenField11.Value;
+            string Totalp = this.HiddenField12.Value;
+
+            AcesoDatos a = new AcesoDatos();
+            if (CodPed == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Codigo de Pedido";
+                return;
+            }
+
+            if (Email == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Email";
+                return;
+            }
+
+            if (Nit== "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Nit";
+                return;
+            }
+
+            if (Nom == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Nombre";
+                return;
+            }
+
+            if (Apel == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Apellido";
+                return;
+            }
+            if (Direc == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Dirección";
+                return;
+            }
+            if (Nutj == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Número de Tarjeta";
+                return;
+            }
+            if (Codtj == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Codigo de Tarjeta";
+                return;
+            }
+            if (Fechv == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Fecha de Vencimiento";
+                return;
+            }
+            if (Mon == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio de Moneda";
+                return;
+            }
+            if (Totalp == "")
+            {
+                this.Msg.Text = "Ha dejado el campo vacio el Total";
+                return;
+            }
+
+            if ()
+            {
+
+            }
+            else
+            {
+
+            }
+
+
+
+        }
     }
 }

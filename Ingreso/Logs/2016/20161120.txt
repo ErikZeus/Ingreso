@@ -1,0 +1,4 @@
+[2016-11-20 22:54:25] - En funcion Regresunregistro : Data truncated for column 'fechan' at row 1
+[2016-11-20 22:54:25] - En funcion Regresunregistro : Incorrect integer value: 'misha' for column 'id' at row 1
+[2016-11-20 23:50:22] - En funcion Regresunregistro : Unknown column 'apellido' in 'field list'
+[2016-11-20 23:55:06] - En funcion Regresunregistro : Unknown column 'nacimiento' in 'field list'

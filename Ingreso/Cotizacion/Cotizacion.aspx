@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cotizacion.aspx.cs" Inherits="Hoja.Cotizacion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cotizacion.aspx.cs" Inherits="Ingreso.Cotizacion" %>
 
 <!DOCTYPE html>
 
@@ -61,13 +61,16 @@
             }
 
         input[type=submit] {
+            border-style: none;
+            border-color: inherit;
+            border-width: 0;
             padding: 5px 15px;
             background: #004BCD;
             color: white;
-            border: 0 none;
             cursor: pointer;
             -webkit-border-radius: 5px;
             border-radius: 5px;
+            height: 35px;
         }
 
             input[type=submit]:hover {
@@ -100,7 +103,7 @@
 
                         <div class="lower-logo">
                             <a href="#" title="Seguros Unity" rel="home">
-                                <img class="logo" src="#" alt="logoUnity"></a>
+                                <img class="logo" src="../Images/Unity%20Regional%20-%20Alta%20resolucio¦ün.jpg" alt="logoUnity" style="width:134px; height:78px;" /></a>
                         </div>
 
                         <!-- Main Navigation -->
@@ -134,7 +137,7 @@
         <div id="nos">
             <div>
                 <div class="wpb_wrapper">
-                    <div style="background-image: url(http://192.168.81.30/Ingreso/Images/BackGround.jpg); background-size: cover;">
+                    <div style="background-image: url(../Images/BackGround.jpg); background-size: cover;">
 
                         <p style="text-align: center;"></p>
                         <div class="col-lg-4 col-md-4 col-sm-12"></div>
@@ -143,42 +146,42 @@
                             <p style="text-align: center;">
                             </p>
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Nombre*" class="form-control" id="NombreC" />
+                                <input type="text" name="name" placeholder="Nombre*" class="form-control" id="NombreC"   onchange="LlenarValorA();" />
 
                             </div>
                             <br />
                              <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Apellido*" class="form-control" id="ApellidoC" />
+                                <input type="text" name="name" placeholder="Apellido*" class="form-control" id="ApellidoC" onchange="LlenarValorB();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Dirección*" class="form-control" id="DireccionC" />
+                                <input type="text" name="name" placeholder="Dirección*" class="form-control" id="DireccionC" onchange="LlenarValorC();"  />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Telefono*" class="form-control" id="TelefonoC" />
+                                <input type="text" name="name" placeholder="Telefono*" class="form-control" id="TelefonoC" onchange="LlenarValorD();"  />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="date" name="name" value="Fecha de Nacimiento" class="form-control" id="FechaNC" />
+                                <input type="date" name="name" class="form-control" id="FechaNC" onchange="LlenarValorE();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="ID*" class="form-control" />
+                                <input type="text" name="name" placeholder="ID*" class="form-control" id="IDC" onchange="LlenarValorF();"  />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="email" placeholder="Email*" class="form-control" />
+                                <input type="text" name="email" placeholder="Email*" class="form-control" id="EmailC" onchange="LlenarValorG();"  />
 
                             </div>
                             <br />
-                            <input type="submit" value="Comprar Seguro" />
-
+&nbsp;<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Cotizar Seguro" />
+                            <asp:Label ID="Msg" runat="server" ForeColor="#CC3300" Text="."></asp:Label>
                             <div id="msg"></div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
@@ -192,12 +195,13 @@
             </div>
         </div>
 
-
-
-
-
-
-
+<asp:HiddenField ID="HiddenField1" runat="server" />
+<asp:HiddenField ID="HiddenField2" runat="server" />
+<asp:HiddenField ID="HiddenField3" runat="server" />
+<asp:HiddenField ID="HiddenField4" runat="server" />
+<asp:HiddenField ID="HiddenField5" runat="server" />
+<asp:HiddenField ID="HiddenField6" runat="server" />
+<asp:HiddenField ID="HiddenField7" runat="server" />
         <!-- Footer -->
         <footer id="footer" style="background-color: #1E1E1E; color: white;">
 
@@ -210,7 +214,7 @@
                         <div class="col-lg-3 col-md-3 col-sm-3">
                             <div id="text-2" class="widget widget_text">
                                 <div class="textwidget">
-                                    <img src="#" alt="logo">
+                                    <img src="../Images/Unity%20regional%20-%20%20logo%20en%20blanco.png" alt="logo" style="width:101px; height:53px;" />
                                     <p style="text-align: justify;">Seguros Ducruet. </p>
                                 </div>
                             </div>
@@ -303,4 +307,41 @@
 
     </form>
 </body>
+    <script type="text/javascript">
+        function LlenarValorA() {
+            var ver = document.getElementById("NombreC").value;
+ 
+            $("#HiddenField1").val(ver);
+        }
+        function LlenarValorB() {
+            var ver = document.getElementById("ApellidoC").value;
+   
+            $("#HiddenField2").val(ver);
+        }
+        function LlenarValorC() {
+            var ver = document.getElementById("DireccionC").value;
+  
+            $("#HiddenField3").val(ver);
+        }
+        function LlenarValorD() {
+            var ver = document.getElementById("TelefonoC").value;
+      
+            $("#HiddenField4").val(ver);
+        }
+        function LlenarValorE() {
+            var ver = document.getElementById("FechaNC").value;
+      
+            $("#HiddenField5").val(ver);
+        }
+        function LlenarValorF() {
+            var ver = document.getElementById("IDC").value;
+    
+            $("#HiddenField6").val(ver);
+        }
+        function LlenarValorG() {
+            var ver = document.getElementById("EmailC").value;
+    
+            $("#HiddenField7").val(ver);
+        }
+    </script>
 </html>

@@ -77,42 +77,28 @@
 
 
 
-             .opciones {
-
-            overflow:hidden;
-
+        .opciones {
+            overflow: hidden;
             text-align: center;
-
             /*margin:auto;*/
-
-
-
         }
 
- 
+
 
         .opcion {
-
-            display:inline-table;
-
-            padding:15px;
-
-            height:100px;
-
-            width:200px;
-
+            display: inline-table;
+            padding: 15px;
+            height: 100px;
+            width: 200px;
             /*margin:3px;*/
-
         }
-
-
-
-
-
-
-
-
-
+        .auto-style1 {
+            display: inline-table;
+            padding: 15px;
+            height: 100px;
+            width: 228px;
+            /*margin:3px;*/
+        }
     </style>
 </head>
 <body>
@@ -139,7 +125,7 @@
 
                         <div class="lower-logo">
                             <a href="#" title="Seguros Unity" rel="home">
-                                <img class="logo" src="#" alt="logoUnity"></a>
+                                <img class="logo" src="../Images/Unity%20Regional%20-%20Alta%20resolucio¦ün.jpg" alt="logoUnity" style="width: 134px; height: 78px;" /></a>
                         </div>
 
                         <!-- Main Navigation -->
@@ -173,107 +159,72 @@
         <div id="nos">
             <div>
                 <div class="wpb_wrapper">
-                    <div style="background-image: url(http://192.168.81.30/Ingreso/Images/BackGround.jpg); background-size: cover;">
+                    <div style="background-image: url(../Images/BackGround.jpg); background-size: cover;">
 
-                       <%-- <p style="text-align: center;"></p>--%>
+                        <%-- <p style="text-align: center;"></p>--%>
                         <div class="col-lg-4 col-md-4 col-sm-12"></div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
-                            <h2 style="text-align: center; color: #000000;" >Cotizar</h2>
+                            <h2 style="text-align: center; color: #000000;">Cotizar</h2>
                             <%--<p style="text-align: center;">
                             </p>--%>
-                         <div class="opciones">
-                            
-                               <div class="opcion" >
-                                <table >
-                                    <tr>
-                                        <td>
-                                              <div class="iconic-input">
-                                                 <input type="text" name="name" placeholder="Planes de Càncer*" class="form-control" />
-
-                                                </div>
-                                                <br />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                                <div class="iconic-input">
-                                <input type="date" name="name" value="Fecha de Nacimiento" class="form-control" />
-
+                            <div style="display: inline-block;text-align:left;float:none;">
+                                <div class="opciones">
+                                    <a>Planes De Cáncer</a> <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" ValueType="System.String"></dx:ASPxComboBox> 
+                                </div>
+                                <div class="auto-style1">
+                                    <a>Suma Asegurada</a><dx:ASPxTextBox ID="ASPxTextBox1" runat="server" Width="170px"></dx:ASPxTextBox>
+                                </div>
                             </div>
-                            <br />
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div >
 
-
-                            <div class="opcion">
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Suma Asegurada*" class="form-control" />
-
-                            </div>
-                            <br />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Edad*" class="form-control" />
-
-                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>    
-                            
-                            <%--<br />--%>
-                            <dx:ASPxButton ID="ASPxButton2" runat="server" BackColor="#3333FF" ForeColor="White" Height="31px" Text="Cotizar" Width="110px" Theme="iOS">
-                            </dx:ASPxButton>
-                            <br />
-                            <br />
-                            
-                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Prima Anual Calculada*" class="form-control" />
-
-                            </div>
-                            <br />
-                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Prima Mensual*" class="form-control" />
-
-                            </div>
-                            <br />
-                        <h2 style="text-align: center; color: #000000;" >Datos del Cliente</h2>
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Codigo*" class="form-control" />
+                                <input type="text" name="name" placeholder="Prima Anual Calculada*" class="form-control" id="PAPC" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Nombre del Cliente*" class="form-control" />
+                                <input type="text" name="name" placeholder="Prima Mensual*" class="form-control" id="PMPC" />
 
                             </div>
                             <br />
-                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Tèlefonos*" class="form-control" />
+                            <h2 style="text-align: center; color: #000000;">Datos del Cliente</h2>
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Codigo*" class="form-control" id="CodigoPC" onchange="LlenarValorC();" />
 
                             </div>
                             <br />
-                             <div class="iconic-input">
-                                <input type="text" name="email" placeholder="E-Mail*" class="form-control" />
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Nombre del Cliente*" class="form-control" id="NomPC" onchange="LlenarValorD();" />
 
                             </div>
                             <br />
-                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Direcciòn Residencial*" class="form-control" />
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Tèlefonos*" class="form-control" id="TelefonoPC" onchange="LlenarValorE();" />
 
                             </div>
                             <br />
-                            <input type="submit" value="Guardar" /><dx:ASPxButton ID="ASPxButton1" runat="server" Height="31px" OnClick="ASPxButton1_Click" Text="Pagar" Width="110px" BackColor="#3333FF" ForeColor="White" Theme="iOS">
+                            <div class="iconic-input">
+                                <input type="text" name="email" placeholder="E-Mail*" class="form-control" id="EmailPC" onchange="LlenarValorF();" />
+
+                            </div>
+                            <br />
+                            <div class="iconic-input">
+                                <input type="text" name="name" placeholder="Direcciòn Residencial*" class="form-control" id="DireccionPC" onchange="LlenarValorG();" />
+
+                            </div>
+                            <br />
+                            <dx:ASPxButton ID="ASPxButton2" runat="server" Height="31px" OnClick="ASPxButton1_Click" Text="Guardar" Width="110px" BackColor="#3333FF" ForeColor="White" Theme="iOS">
                             </dx:ASPxButton>
+                            <br />
+                            <dx:ASPxButton ID="ASPxButton1" runat="server" Height="31px" OnClick="ASPxButton1_Click" Text="Pagar" Width="110px" BackColor="#3333FF" ForeColor="White" Theme="iOS">
+                            </dx:ASPxButton>
+                            <asp:Label ID="Msg" runat="server" ForeColor="#CC3300" Text="."></asp:Label>
+                            <asp:HiddenField ID="HiddenField1" runat="server" OnValueChanged="HiddenField1_ValueChanged" />
+                            <asp:HiddenField ID="HiddenField2" runat="server" />
+                            <asp:HiddenField ID="HiddenField3" runat="server" />
+                            <asp:HiddenField ID="HiddenField4" runat="server" />
+                            <asp:HiddenField ID="HiddenField5" runat="server" />
+                            <asp:HiddenField ID="HiddenField6" runat="server" />
+                            <asp:HiddenField ID="HiddenField7" runat="server" />
                             &nbsp;<div id="msg"></div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
@@ -305,7 +256,7 @@
                         <div class="col-lg-3 col-md-3 col-sm-3">
                             <div id="text-2" class="widget widget_text">
                                 <div class="textwidget">
-                                    <img src="#" alt="logo">
+                                    <img src="../Images/Unity%20regional%20-%20%20logo%20en%20blanco.png" alt="logo" style="width: 101px; height: 53px;" />
                                     <p style="text-align: justify;">Seguros Ducruet. </p>
                                 </div>
                             </div>
@@ -322,6 +273,7 @@
                                             <i class="icons icon-location-7"></i>
                                             Ducruet Panama<br />
                                             C/ Rodríguez Arias, 15, 7ª planta
+                                           
                                             <br />
                                             48008 Bilbao - Bizkaia
                                         </li>
@@ -329,6 +281,7 @@
                                         <li>
                                             <i class="icons icon-mobile-6"></i>
                                             Teléfono: (+34) 944 15 96 88 
+                                           
                                             <br />
                                             Fax: (+34) 944 15 71 76
                                         </li>
@@ -352,6 +305,7 @@
                                             <i class="icons icon-location-7"></i>
                                             Seguros Ducruet<br>
                                             C/ Vicente Goikoetxea, 6, 1ª - Oficina 4F
+                                           
                                             <br>
                                             01008 Vitoria-Gasteiz - Araba
                                         </li>
@@ -359,6 +313,7 @@
                                         <li>
                                             <i class="icons icon-mobile-6"></i>
                                             Teléfono: (+34) 945 20 27 97 
+                                           
                                             <br>
                                             Fax: (+34) 944 15 71 76
                                         </li>
@@ -398,4 +353,41 @@
 
     </form>
 </body>
+     <script type="text/javascript">
+        function LlenarValorA() {
+            var ver = document.getElementById("PAPC").value;
+ 
+            $("#HiddenField1").val(ver);
+        }
+        function LlenarValorB() {
+            var ver = document.getElementById("PMPC").value;
+   
+            $("#HiddenField2").val(ver);
+        }
+        function LlenarValorC() {
+            var ver = document.getElementById("CodigoPC").value;
+  
+            $("#HiddenField3").val(ver);
+        }
+        function LlenarValorD() {
+            var ver = document.getElementById("NomPC").value;
+      
+            $("#HiddenField4").val(ver);
+        }
+        function LlenarValorE() {
+            var ver = document.getElementById("TelefonoPC").value;
+      
+            $("#HiddenField5").val(ver);
+        }
+        function LlenarValorF() {
+            var ver = document.getElementById("EmailPC").value;
+    
+            $("#HiddenField6").val(ver);
+        }
+        function LlenarValorG() {
+            var ver = document.getElementById("DireccionPC").value;
+    
+            $("#HiddenField7").val(ver);
+        }
+    </script>
 </html>

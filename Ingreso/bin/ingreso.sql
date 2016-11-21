@@ -15,6 +15,31 @@ CREATE DATABASE IF NOT EXISTS `ingreso` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `ingreso`;
 
 
+-- Volcando estructura para tabla ingreso.clientes
+CREATE TABLE IF NOT EXISTS `clientes` (
+  `indice` int(11) NOT NULL AUTO_INCREMENT,
+  `Pago` int(11) NOT NULL DEFAULT '0',
+  `nombre` varchar(200) DEFAULT NULL,
+  `apellido` varchar(200) DEFAULT NULL,
+  `email` varchar(250) DEFAULT NULL,
+  `direccion` varchar(500) DEFAULT NULL,
+  `fechan` int(11) DEFAULT NULL,
+  `telefono` int(11) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`indice`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla ingreso.clientes: ~5 rows (aproximadamente)
+/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+INSERT INTO `clientes` (`indice`, `Pago`, `nombre`, `apellido`, `email`, `direccion`, `fechan`, `telefono`, `id`) VALUES
+	(1, 0, 'misha', NULL, NULL, NULL, NULL, NULL, NULL),
+	(2, 0, NULL, 'cookie', NULL, NULL, NULL, NULL, NULL),
+	(3, 0, NULL, NULL, NULL, 'san cristobal, mixco guatemala', NULL, NULL, NULL),
+	(4, 0, NULL, NULL, NULL, NULL, NULL, 524156652, NULL),
+	(5, 0, NULL, NULL, 'misha@com.com', NULL, NULL, NULL, NULL);
+/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
+
+
 -- Volcando estructura para tabla ingreso.menu
 CREATE TABLE IF NOT EXISTS `menu` (
   `indice` int(11) NOT NULL AUTO_INCREMENT,
@@ -31,18 +56,34 @@ INSERT INTO `menu` (`indice`, `nombre`, `Url`) VALUES
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
 
+-- Volcando estructura para tabla ingreso.planes
+CREATE TABLE IF NOT EXISTS `planes` (
+  `indice` int(11) NOT NULL AUTO_INCREMENT,
+  `Planes` varchar(350) DEFAULT '0',
+  KEY `indice` (`indice`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla ingreso.planes: ~1 rows (aproximadamente)
+/*!40000 ALTER TABLE `planes` DISABLE KEYS */;
+INSERT INTO `planes` (`indice`, `Planes`) VALUES
+	(1, 'Plan de Cancer');
+/*!40000 ALTER TABLE `planes` ENABLE KEYS */;
+
+
 -- Volcando estructura para tabla ingreso.roldetalle
 CREATE TABLE IF NOT EXISTS `roldetalle` (
   `indice` int(11) NOT NULL AUTO_INCREMENT,
   `idrol` int(11) DEFAULT '0',
   `idsubmenu` int(11) DEFAULT '0',
   KEY `indice` (`indice`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla ingreso.roldetalle: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla ingreso.roldetalle: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `roldetalle` DISABLE KEYS */;
 INSERT INTO `roldetalle` (`indice`, `idrol`, `idsubmenu`) VALUES
-	(1, 2, 2);
+	(1, 2, 2),
+	(2, 1, 1),
+	(3, 3, 2);
 /*!40000 ALTER TABLE `roldetalle` ENABLE KEYS */;
 
 
@@ -51,17 +92,16 @@ CREATE TABLE IF NOT EXISTS `roles` (
   `indice` int(11) NOT NULL AUTO_INCREMENT,
   `rolnombre` varchar(450) DEFAULT '0',
   KEY `indice` (`indice`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla ingreso.roles: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla ingreso.roles: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` (`indice`, `rolnombre`) VALUES
 	(1, 'Cliente'),
 	(2, 'Administrador'),
 	(3, 'Vendedores'),
 	(4, 'Hola'),
-	(5, 'Hola2'),
-	(6, 'Hola3');
+	(5, 'Hola2');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
 

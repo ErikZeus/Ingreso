@@ -34,7 +34,7 @@ namespace Ingreso
 
             AcesoDatos ac = new AcesoDatos();
             validausuario = ac.Regresaunregistro("Select indice from vendedores where usuario = '"+UsuarioEjecutivo+"' and ifnull(status,0) = 1 ");
-            validapassword = ac.Regresaunregistro("Select indice from vendedores where password = '" + Password + "'  and ifnull(status,0) = 1 ");
+            validapassword = ac.Regresaunregistro("Select indice from vendedores where  usuario = '" + UsuarioEjecutivo + "' and password = '" + Password + "'  and ifnull(status,0) = 1 ");
             if (validausuario == validapassword && validausuario != "")
             {
                 return true;

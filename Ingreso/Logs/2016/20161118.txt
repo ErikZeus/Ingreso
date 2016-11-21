@@ -1,0 +1,4 @@
+[2016-11-18 10:14:08] - En funcion Regresunregistro : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Access denied for user 'root'@'localhost' (using password: YES)
+[2016-11-18 10:14:08] - En funcion Regresunregistro : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Access denied for user 'root'@'localhost' (using password: YES)
+[2016-11-18 10:47:00] - En funcion Regresunregistro : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Access denied for user 'root'@'localhost' (using password: YES)
+[2016-11-18 10:47:00] - En funcion Regresunregistro : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Access denied for user 'root'@'localhost' (using password: YES)

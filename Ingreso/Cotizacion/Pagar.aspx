@@ -145,57 +145,57 @@
                             <p style="text-align: center;">
                             </p>
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Codigo de Pedido*" class="form-control" />
+                                <input type="text" name="name" placeholder="Codigo de Pedido*" class="form-control" id="CodigoP" onchange="LlenarValorA();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Email*" class="form-control" />
+                                <input type="text" name="name" placeholder="Email*" class="form-control" id="EmailP" onchange="LlenarValorB();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Nit*" class="form-control" />
+                                <input type="text" name="name" placeholder="Nit*" class="form-control" id="NitP" onchange="LlenarValorC();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Nombre*" class="form-control" />
+                                <input type="text" name="name" placeholder="Nombre*" class="form-control" id="NomP"  onchange="LlenarValorD();"/>
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Apellido*" class="form-control" />
+                                <input type="text" name="name" placeholder="Apellido*" class="form-control" id="ApeP" onchange="LlenarValorE();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Dirreciòn*" class="form-control" />
+                                <input type="text" name="name" placeholder="Dirreciòn*" class="form-control" id="DirecP" onchange="LlenarValorF();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Nùmero de tarjeta de credito*" class="form-control" />
+                                <input type="text" name="name" placeholder="Nùmero de tarjeta de credito*" class="form-control" id="NuTarP" onchange="LlenarValorG();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Codigo de la tarjeta de credito*" class="form-control" />
+                                <input type="text" name="name" placeholder="Codigo de la tarjeta de credito*" class="form-control" id="CodTarP" onchange="LlenarValorH();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="date" name="name" value="Fecha de Vencimiento" class="form-control" />
+                                <input type="date" name="name" value="Fecha de Vencimiento" class="form-control" id="FecVP" onchange="LlenarValorI();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="name" placeholder="Moneda*" class="form-control" />
+                                <input type="text" name="name" placeholder="Moneda*" class="form-control" id="MonP"  onchange="LlenarValorJ();" />
 
                             </div>
                             <br />
                             <div class="iconic-input">
-                                <input type="text" name="email" placeholder="Total a Pagar*" class="form-control" />
+                                <input type="text" name="email" placeholder="Total a Pagar*" class="form-control" id="TPP" onchange="LlenarValorK();" />
 
                             </div>
                             <br />
@@ -210,10 +210,24 @@
                             <dx:ASPxButton ID="ASPxButton1" runat="server" OnClick="ASPxButton1_Click" Text="Re Captcha">
                             </dx:ASPxButton>
                             <br />
+                            <dx:ASPxButton ID="ASPxButton2" runat="server" Height="30px" OnClick="ASPxButton2_Click" Text="Pagar" Theme="iOS" Width="159px">
+                            </dx:ASPxButton>
+                            <asp:Label ID="Msg" runat="server" ForeColor="#CC3300" Text="."></asp:Label>
                             <br />
-                            <input type="submit" value="Comprar Seguro" />
-
-                            <div id="msg"></div>
+                            <asp:HiddenField ID="HiddenField2" runat="server" />
+                            <asp:HiddenField ID="HiddenField3" runat="server" />
+                            <asp:HiddenField ID="HiddenField4" runat="server" />
+                            <asp:HiddenField ID="HiddenField5" runat="server" />
+                            <asp:HiddenField ID="HiddenField6" runat="server" />
+                            <asp:HiddenField ID="HiddenField7" runat="server" />
+                            <asp:HiddenField ID="HiddenField8" runat="server" />
+                            <asp:HiddenField ID="HiddenField9" runat="server" />
+                            <asp:HiddenField ID="HiddenField10" runat="server" />
+                            <asp:HiddenField ID="HiddenField11" runat="server" />
+                            <asp:HiddenField ID="HiddenField12" runat="server" />
+                            <asp:HiddenField ID="HiddenField13" runat="server" />
+                            <br />
+                            &nbsp;<div id="msg"></div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <br />
@@ -244,7 +258,7 @@
                         <div class="col-lg-3 col-md-3 col-sm-3">
                             <div id="text-2" class="widget widget_text">
                                 <div class="textwidget">
-                                    <img src="#" alt="logo">
+                                    <img src="../Images/Unity%20regional%20-%20%20logo%20en%20blanco.png" alt="logo" style="width:101px; height:53px;" />
                                     <p style="text-align: justify;">Seguros Ducruet. </p>
                                 </div>
                             </div>
@@ -337,4 +351,61 @@
 
     </form>
 </body>
+      <script type="text/javascript">
+        function LlenarValorA() {
+            var ver = document.getElementById("CodigoP").value;
+ 
+            $("#HiddenField2").val(ver);
+        }
+        function LlenarValorB() {
+            var ver = document.getElementById("EmailP").value;
+   
+            $("#HiddenField3").val(ver);
+        }
+        function LlenarValorC() {
+            var ver = document.getElementById("NitP").value;
+  
+            $("#HiddenField4").val(ver);
+        }
+        function LlenarValorD() {
+            var ver = document.getElementById("NomP").value;
+      
+            $("#HiddenField5").val(ver);
+        }
+        function LlenarValorE() {
+            var ver = document.getElementById("ApeP").value;
+      
+            $("#HiddenField6").val(ver);
+        }
+        function LlenarValorF() {
+            var ver = document.getElementById("DirecP").value;
+    
+            $("#HiddenField7").val(ver);
+        }
+        function LlenarValorG() {
+            var ver = document.getElementById("NuTarP").value;
+    
+            $("#HiddenField8").val(ver);
+        }
+        function LlenarValorH() {
+            var ver = document.getElementById("CodTarP").value;
+
+            $("#HiddenField9").val(ver);
+        }
+        function LlenarValorI() {
+            var ver = document.getElementById("FecVP").value;
+
+            $("#HiddenField10").val(ver);
+        }
+        function LlenarValorJ() {
+            var ver = document.getElementById("MonP").value;
+
+            $("#HiddenField11").val(ver);
+        }
+        function LlenarValorK() {
+            var ver = document.getElementById("TPP").value;
+
+            $("#HiddenField12").val(ver);
+        }
+    </script>
 </html>
